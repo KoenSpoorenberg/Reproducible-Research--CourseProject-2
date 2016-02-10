@@ -1,0 +1,30 @@
+#Reproducible Research: Course Project 2
+Author: Koen Spoorenberg
+
+## Preperations
+
+*Set workingdirectory*
+```{r}
+setwd("~/RepData_CourseProject2")
+```
+*Download if necessary*
+```{r}
+if (!file.exists("StormData.bz2"))
+{
+    download.file("https://d396qusza40orc.cloudfront.net/repdata%2Fdata%2FStormData.csv.bz2", "StormData.bz2")
+}
+```
+*Load the csv*
+```{r}
+if (!exists("storm.data"))
+{
+    storm.data<-read.csv("StormData.bz2", head=TRUE)
+}
+
+head(storm.data)
+
+```
+
+
+
+
